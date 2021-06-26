@@ -1,8 +1,17 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import BaseIcon from "./components/BaseIcon.vue";
+/* import BaseButton from "./components/BaseButton.vue";
+import BaseInput from "./components/BaseInput.vue"; */
 
-Vue.config.productionTip = false
+Vue.component("BaseIcon", BaseIcon);
+/* Vue.component("BaseIcon", BaseButton);
+Vue.component("BaseIcon", BaseInput); */
+
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  render: (h) => h(App),
+}).$mount("#app");
